@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="UI Assignment">
+    <meta name="keywords" content="UI, Assignment, HTML, CSS, JavaScript, Bootstrap, jQuery, Font Awesome">
+    <meta name="author" content="Marshall">
+
     <title>Marshall Heyda - UI Assignment</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- Add bootstrap 5.3.3 -->
@@ -53,14 +56,13 @@
       </div>
     </nav>
     <main>
-        <div id="error-container"></div>
         <div class="container">
           <div class="py-2">
             Showing <span id="total-count">0</span> Records
           </div>
           <ul id="card-container" class="list-unstyled row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-8"></ul>
+          <div id="error-container"></div>
         </div>
-
     </main>
 	<script>
     window.onload = getData();
@@ -95,8 +97,8 @@
         })
         .catch((error) => {
           console.error(error);
-          alert("Something went wrong! Unable to load records.");
           $("#error-container").html("Unable to load records...");
+          alert("Something went wrong! Unable to load records.");
         });
     }
 
